@@ -57,7 +57,7 @@ public class ManagerService {
     public Map<String, String> getMeasurement() {
         Map<String, String> measurement = new HashMap<>();
 
-        measurement.put("electricityConsumption", "1000 * MW * H");
+        measurement.put("electricityConsumption", "kW * H");
         measurement.put("electricityCost", "UAH");
         measurement.put("electricityProduction", "kW * H");
         measurement.put("electricityProductionCost", "UAH");
@@ -65,26 +65,26 @@ public class ManagerService {
         measurement.put("heatSales", "MW");
         measurement.put("heatConsumption", "GKal");
         measurement.put("heatOwnUseCost", "UAH");
-        measurement.put("gasConsumption", "m^3");
-        measurement.put("gasCost", "USD");
-        measurement.put("waterConsumption", "m^3");
-        measurement.put("waterCost", "USD");
-        measurement.put("coalConsumption", "tonnes");
-        measurement.put("coalCost", "USD");
-        measurement.put("fuelOilConsumption", "liters");
-        measurement.put("fuelOilCost", "USD");
-        measurement.put("dieselFuelConsumption", "liters");
-        measurement.put("dieselFuelCost", "USD");
-        measurement.put("gasolineConsumption", "liters");
-        measurement.put("gasolineCost", "USD");
-        measurement.put("lubricatingMaterialsConsumption", "kg");
-        measurement.put("lubricatingMaterialsCost", "USD");
-        measurement.put("wastewaterDisposal", "m^3");
-        measurement.put("wastewaterDisposalCost", "USD");
-        measurement.put("solidWasteVolume", "m^3");
-        measurement.put("solidWasteDisposalCost", "USD");
+        measurement.put("gasConsumption", "M^3");
+        measurement.put("gasCost", "UAH");
+        measurement.put("waterConsumption", "M^3");
+        measurement.put("waterCost", "UAH");
+        measurement.put("coalConsumption", "1000 * KG");
+        measurement.put("coalCost", "UAH");
+        measurement.put("fuelOilConsumption", "M^3");
+        measurement.put("fuelOilCost", "UAH");
+        measurement.put("dieselFuelConsumption", "M^3");
+        measurement.put("dieselFuelCost", "UAH");
+        measurement.put("gasolineConsumption", "M^3");
+        measurement.put("gasolineCost", "UAH");
+        measurement.put("lubricatingMaterialsConsumption", "KG");
+        measurement.put("lubricatingMaterialsCost", "UAH");
+        measurement.put("wastewaterDisposal", "M^3");
+        measurement.put("wastewaterDisposalCost", "UAH");
+        measurement.put("solidWasteVolume", "M^3");
+        measurement.put("solidWasteDisposalCost", "UAH");
         measurement.put("environmentalTemperature", "°C");
-        measurement.put("productionAndServices", "units");
+        measurement.put("productionAndServices", "UNITS");
 
         return measurement;
     }

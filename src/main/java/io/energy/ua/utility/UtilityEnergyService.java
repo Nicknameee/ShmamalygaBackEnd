@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class UtilityEnergyService {
     public static final Map<InitialDataModel.Fields, List<Integer>> ranges = Map.ofEntries(
-            Map.entry(InitialDataModel.Fields.electricityConsumption, List.of(10_000, 13_000)),
+            Map.entry(InitialDataModel.Fields.electricityConsumption, List.of(100_000, 190_000)),
             Map.entry(InitialDataModel.Fields.electricityCost, List.of(8_000, 20_000)),
             Map.entry(InitialDataModel.Fields.electricityProduction, List.of(150_000, 250_000)),
             Map.entry(InitialDataModel.Fields.electricityProductionCost, List.of(10_000, 25_000)),
