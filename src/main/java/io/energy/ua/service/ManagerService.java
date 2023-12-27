@@ -57,9 +57,9 @@ public class ManagerService {
     public Map<String, String> getMeasurement() {
         Map<String, String> measurement = new HashMap<>();
 
-        measurement.put("electricityConsumption", "kW * H");
+        measurement.put("electricityConsumption", "MW * H");
         measurement.put("electricityCost", "UAH");
-        measurement.put("electricityProduction", "kW * H");
+        measurement.put("electricityProduction", "MW * H");
         measurement.put("electricityProductionCost", "UAH");
         measurement.put("heatProductionForSale", "GKal");
         measurement.put("heatSales", "MW");
@@ -69,7 +69,7 @@ public class ManagerService {
         measurement.put("gasCost", "UAH");
         measurement.put("waterConsumption", "M^3");
         measurement.put("waterCost", "UAH");
-        measurement.put("coalConsumption", "1000 * KG");
+        measurement.put("coalConsumption", "10^3 * KG");
         measurement.put("coalCost", "UAH");
         measurement.put("fuelOilConsumption", "M^3");
         measurement.put("fuelOilCost", "UAH");

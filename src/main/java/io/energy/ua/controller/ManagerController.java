@@ -10,7 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/manager")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:8081")
+@CrossOrigin(origins = "*")
 public class ManagerController {
     private final ManagerService managerService;
     @GetMapping("/data")

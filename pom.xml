@@ -5,18 +5,55 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.energy.ua</groupId>
-    <artifactId>EnergyBalanceServer</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>Starter</artifactId>
+    <version>I</version>
 
     <properties>
-        <maven.compiler.source>20</maven.compiler.source>
-        <maven.compiler.target>20</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.boot.version>2.7.15</spring.boot.version>
         <jackson.version>2.15.2</jackson.version>
         <jwt.version>0.11.5</jwt.version>
         <reflection.version>0.10.2</reflection.version>
     </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <finalName>app</finalName>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>io.energy.ua.Starter</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>source</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>

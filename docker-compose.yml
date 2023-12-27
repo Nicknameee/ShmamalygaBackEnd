@@ -1,0 +1,12 @@
+version: '3.5'  # Use the latest Docker Compose format
+
+services:
+  backend:
+    image: backend:latest
+    ports:
+      - "8080:8080"  # Map port 8080 of the container to port 8080 on the host
+    networks:
+      - application
+networks:
+  application:
+    external: true
