@@ -6,7 +6,7 @@
 
     <groupId>io.energy.ua</groupId>
     <artifactId>Starter</artifactId>
-    <version>I</version>
+    <version>LATEST</version>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -23,7 +23,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
-                    <finalName>app</finalName>
+                    <finalName>Starter</finalName>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>

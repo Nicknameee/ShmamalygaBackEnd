@@ -1,14 +1,26 @@
-# Fetching latest version of Java
-FROM openjdk:17
+# Use an official Maven image as a build stage
+FROM maven:3.8.4-openjdk-17 AS build
 
-# Setting up work directory
+# Set the working directory
 WORKDIR /app
 
-# Copy the jar file into our app
-COPY ./target/*.jar /app/source.jar
+# Copy the project files
+COPY . .
 
-# Exposing port 8080
+# Build the application
+RUN mvn clean install
+
+# Use an official OpenJDK image as the final stage
+FROM openjdk:18-alpine
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the JAR file from the build stage
+COPY --from=build /app/target/*.jar app.jar
+
+# Expose the port the app runs on
 EXPOSE 8080
 
-# Starting the application
-CMD ["java", "-jar", "source.jar"]
+# Specify the command to run on container start
+CMD ["java", "-jar", "app.jar"]
